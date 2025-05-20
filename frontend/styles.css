@@ -1,0 +1,264 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+#role-selection, #defender-section, #attacker-section {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button.disabled-play {
+    background-color: lightgray;
+    color: #666; /* Darker text for better contrast on light gray */
+    cursor: not-allowed; /* Indicate it's not clickable */
+}
+
+input[type="text"], textarea, select {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 20px); /* Adjust width considering padding */
+}
+
+textarea {
+    resize: vertical;
+}
+
+#challenge-list .challenge-item {
+    border: 1px solid #eee;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    position: relative; /* Added for positioning the checkmark */
+}
+
+/* New style for the solved checkmark */
+.solved-checkmark {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    color: green;
+}
+
+#challenge-list button {
+    background-color: #28a745;
+}
+
+#challenge-list button:hover {
+    background-color: #218838;
+}
+
+/* Modified to be more specific */
+#challenge-list button.disabled-play {
+    background-color: lightgray;
+    color: #666;
+    cursor: not-allowed;
+}
+
+#game-play-section {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+}
+
+#chat-history {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+}
+
+#chat-history p {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+#chat-history .user-message {
+    text-align: right;
+    background-color: #d1ecf1;
+    margin-left: 40px;
+}
+
+#chat-history .assistant-message {
+    text-align: left;
+    background-color: #fff;
+    margin-right: 40px;
+}
+
+#chat-history .system-message {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    background-color: transparent;
+    font-size: 0.9em;
+}
+
+#attack-form {
+    display: flex;
+}
+
+#attack-form input {
+    flex-grow: 1;
+    margin-right: 5px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Leaderboard Styles */
+#leaderboard-section {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#leaderboard-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#overall-leaderboard-content {
+    max-height: 400px; /* Limit height and add scroll if needed */
+    overflow-y: auto;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.leaderboard-entry {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #f9f9f9;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+.leaderboard-entry:last-child {
+    border-bottom: none;
+}
+
+.leaderboard-entry:nth-child(odd) {
+    background-color: #fff; /* Zebra striping */
+}
+
+.leaderboard-rank {
+    font-weight: bold;
+    min-width: 30px; /* Ensure rank alignment */
+    text-align: right;
+    margin-right: 15px;
+    color: #007bff;
+}
+
+.leaderboard-username {
+    flex-grow: 1; /* Take up remaining space */
+    text-align: left;
+    margin-right: 15px;
+}
+
+.leaderboard-score {
+    font-weight: bold;
+    min-width: 50px; /* Ensure score alignment */
+    text-align: right;
+    color: #28a745;
+}
+
+#back-to-roles-leaderboard {
+    display: block; /* Center the button */
+    margin: 20px auto 0; /* Add top margin and center */
+    background-color: #6c757d;
+}
+
+#back-to-roles-leaderboard:hover {
+    background-color: #5a6268;
+}
+
+#user-info {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000; /* 确保它显示在其他元素上面 */
+}
+
+#user-info p {
+    margin: 0 0 5px 0;
+}
+
+#logout-btn {
+    background-color: #dc3545;
+    margin: 0;
+}
+
+#logout-btn:hover {
+    background-color: #c82333;
+}
+
+/* Model Button Group Styles */
+.model-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.model-btn {
+    background: #eee;
+    color: #333;
+    border: 1px solid #bbb;
+    border-radius: 20px;
+    padding: 8px 18px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+}
+
+.model-btn.active, .model-btn:hover {
+    background: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}

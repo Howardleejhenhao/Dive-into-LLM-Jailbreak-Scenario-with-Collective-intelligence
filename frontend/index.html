@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Howard的後宮小嬌妻</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Howard的後宮小嬌妻</h1>
+
+    <!-- Authentication Section -->
+    <div id="auth-section">
+        <div id="login-form-container">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="login-username">Username:</label><br>
+                <input type="text" id="login-username" name="username" required><br><br>
+                <label for="login-password">Password:</label><br>
+                <input type="password" id="login-password" name="password" required><br><br>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <button id="show-register-btn">Register</button></p>
+        </div>
+        <div id="register-form-container" class="hidden">
+            <h2>Register</h2>
+            <form id="register-form">
+                <label for="register-username">Username:</label><br>
+                <input type="text" id="register-username" name="username" required><br><br>
+                <label for="register-password">Password:</label><br>
+                <input type="password" id="register-password" name="password" required><br><br>
+                <button type="submit">Register</button>
+            </form>
+            <p>Already have an account? <button id="show-login-btn">Login</button></p>
+        </div>
+    </div>
+
+    
+    <!-- Role Selection (Shown when logged in) -->
+    <div id="role-selection" class="hidden">
+        <h2>Main page:</h2>
+        <button id="select-attacker">Attacker</button>
+        <button id="select-defender">Defender</button>
+        <button id="view-leaderboards-btn">View Challenge Leaderboards</button> <!-- Renamed -->
+        <button id="view-user-leaderboard-btn">View User Leaderboard</button> <!-- Added -->
+    </div>
+    
+    <!-- Defender Section (Shown when defender role selected) -->
+    <div id="defender-section" class="hidden">
+        <h2>Create a Challenge</h2>
+        <button id="back-to-roles-defender">Back to main page</button>
+        <form id="challenge-form">
+            <label for="defender-prompt">Defender Prompt:</label><br>
+            <textarea id="defender-prompt" name="defender_prompt" rows="4" cols="50" required></textarea><br><br>
+            
+            <label for="forbidden-words">Forbidden Sentence:</label><br>
+            <input type="text" id="forbidden-words" name="forbidden_words" required> <span id="forbidden-sentence-count">0/50</span><br><br>
+            
+            <label for="description">Description:</label><br>
+            <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+            
+            <!-- <label for="model-select">LLM Model:</label><br> -->
+            <!-- <select id="model-select" name="model"> -->
+                <!-- Options will be populated by JS -->
+                <!-- <option value="">Loading models...</option> -->
+            <!-- </select><br><br> -->
+            
+            <button type="submit">Create Challenge</button>
+        </form>
+    </div>
+    
+    <!-- Attacker Section (Shown when attacker role selected) -->
+    <div id="attacker-section" class="hidden">
+        <h2>Select a Challenge</h2>
+        <button id="back-to-roles-attacker">Back to main page</button>
+        
+        <!-- Attacker's Model Selection Dropdown -->
+        <div id="attacker-model-selection-div">
+            <label>Select Model:</label>
+        </div>
+        
+        <div id="challenge-list">
+            <!-- Challenges will be loaded here -->
+            Loading challenges...
+        </div>
+        
+        <!-- Game Play Section (within Attacker) -->
+        <div id="game-play-section" class="hidden">
+            <h3>Playing Challenge by <span id="playing-creator-username"></span></h3>
+            <!-- <p>Forbidden Words: <span id="playing-forbidden-words"></span></p> -->
+             <!--給description-->
+            <p>Description: <span id="playing-description"></span></p> 
+            <p>Turns Left: <span id="turns-left">10</span></p>
+            <div id="chat-history">
+                <!-- Chat messages will appear here -->
+            </div>
+            <form id="attack-form">
+                <!-- Changed input to textarea -->
+                <textarea id="attack-message" placeholder="Your message... (Shift+Enter for new line)" rows="3" required></textarea> <span id="attack-message-count">0/500</span>
+                <button type="submit">Send</button>
+            </form>
+            <!-- Game Over Controls -->
+            <div id="game-over-controls" class="hidden">
+                <button id="retry-challenge-btn">Retry Challenge</button>
+                <button id="quit-game-btn">Back to Challenge List</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Leaderboard Section (Overall Challenges) -->
+    <div id="leaderboard-section" class="hidden">
+        <h2>Challenge Leaderboard</h2> <!-- Renamed Title -->
+        <button id="back-to-roles-leaderboard">Back to main page</button>
+        <div id="overall-leaderboard-content">
+            <!-- Leaderboard content will be loaded here -->
+            Loading leaderboard...
+        </div>
+    </div>
+    
+    <!-- User Leaderboard Section (New) -->
+    <div id="user-leaderboard-section" class="hidden">
+        <h2>User Leaderboard (Challenges Solved)</h2>
+        <button id="back-to-roles-user-leaderboard">Back to main page</button>
+        <div id="user-leaderboard-content">
+            <!-- User leaderboard content will be loaded here -->
+            Loading user leaderboard...
+        </div>
+    </div>
+    
+    <!-- User Info Section (Shown when logged in) -->
+    <div id="user-info" class="hidden">
+        <p>Logged in as: <strong id="logged-in-username"></strong></p>
+        <button id="logout-btn">Logout</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
