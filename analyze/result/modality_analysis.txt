@@ -1,0 +1,13 @@
+└─Δ python .\modality_analysis.py
+Device set to use cpu
+Modality distribution for successful attacks:
+  factual: 2/410 (0.49%)
+  suggestion: 16/410 (3.90%)
+  hypothetical: 0/410 (0.00%)
+  conditional: 392/410 (95.61%)
+
+Modality distribution for failed attacks:
+  factual: 9/1348 (0.67%)
+  suggestion: 150/1348 (11.13%)
+  hypothetical: 5/1348 (0.37%)
+  conditional: 1184/1348 (87.83%)

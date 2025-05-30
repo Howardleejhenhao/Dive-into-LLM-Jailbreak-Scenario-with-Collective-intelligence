@@ -1,0 +1,20 @@
+└─Δ python .\EP_modality_analysis.py
+Device set to use cpu
+
+Modality distribution for early phase (n=156):
+  factual: 0/156 (0.00%)
+  suggestion: 3/156 (1.92%)
+  hypothetical: 0/156 (0.00%)
+  conditional: 153/156 (98.08%)
+
+Modality distribution for mid phase (n=134):
+  factual: 2/134 (1.49%)
+  suggestion: 6/134 (4.48%)
+  hypothetical: 0/134 (0.00%)
+  conditional: 126/134 (94.03%)
+
+Modality distribution for late phase (n=120):
+  factual: 0/120 (0.00%)
+  suggestion: 7/120 (5.83%)
+  hypothetical: 0/120 (0.00%)
+  conditional: 113/120 (94.17%)

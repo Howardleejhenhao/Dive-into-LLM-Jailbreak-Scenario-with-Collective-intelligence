@@ -1,0 +1,14 @@
+└─Δ python .\politeness_analysis_extended.py
+Some weights of the model checkpoint at joeddav/xlm-roberta-large-xnli were not used when initializing XLMRobertaForSequenceClassification: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Device set to use cpu
+Categories among successful attacks:
+- Polite: 255/410 (62.20%)
+- Direct: 123/410 (30.00%)
+- None: 32/410 (7.80%)
+
+Categories among failed attacks:
+- Polite: 786/1348 (58.31%)
+- Direct: 363/1348 (26.93%)
+- None: 199/1348 (14.76%)
