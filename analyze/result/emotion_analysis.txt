@@ -1,0 +1,19 @@
+└─Δ python .\emotion_analysis.py
+Device set to use cpu
+D:\program\project\Dive-into-LLM-Jailbreak-Scenario-with-Collective-intelligence\analyze\venv\lib\site-packages\transformers\pipelines\text_classification.py:106: UserWarning: `return_all_scores` is now deprecated,  if want a similar functionality use `top_k=None` instead of `return_all_scores=True` or `top_k=1` instead of `return_all_scores=False`.
+  warnings.warn(
+Emotion Analysis of Jailbreak Prompts
+-------------------------------------
+Total successful prompts: 410
+Total failed prompts:    1348
+
+Emotion     Success %     Fail %
+--------------------------------
+neutral       48.29%    43.40%
+happy          9.02%    12.17%
+sad           14.88%    10.39%
+angry          5.37%     8.01%
+surprise       3.17%     5.12%
+fear          14.15%    18.25%
+disgust        1.46%     0.82%
+question       3.66%     1.85%

@@ -1,0 +1,34 @@
+Device set to use cpu
+D:\program\project\Dive-into-LLM-Jailbreak-Scenario-with-Collective-intelligence\analyze\venv\lib\site-packages\transformers\pipelines\text_classification.py:106: UserWarning: `return_all_scores` is now deprecated,  if want a similar functionality use `top_k=None` instead of `return_all_scores=True` or `top_k=1` instead of `return_all_scores=False`.
+  warnings.warn(
+Emotion Analysis by Phase (Successful Attacks)
+------------------------------------------------
+
+Phase        #Msgs  Emotion      Count  % of Phase
+--------------------------------------------------
+Early          156  neutral         79      50.64%
+Early          156  happy           12       7.69%
+Early          156  sad             20      12.82%
+Early          156  angry            8       5.13%
+Early          156  surprise         5       3.21%
+Early          156  fear            26      16.67%
+Early          156  disgust          2       1.28%
+Early          156  question         4       2.56%
+
+Mid            134  neutral         56      41.79%
+Mid            134  happy           20      14.93%
+Mid            134  sad             16      11.94%
+Mid            134  angry            8       5.97%
+Mid            134  surprise         2       1.49%
+Mid            134  fear            21      15.67%
+Mid            134  disgust          3       2.24%
+Mid            134  question         8       5.97%
+
+Late           120  neutral         63      52.50%
+Late           120  happy            5       4.17%
+Late           120  sad             25      20.83%
+Late           120  angry            6       5.00%
+Late           120  surprise         6       5.00%
+Late           120  fear            11       9.17%
+Late           120  disgust          1       0.83%
+Late           120  question         3       2.50%

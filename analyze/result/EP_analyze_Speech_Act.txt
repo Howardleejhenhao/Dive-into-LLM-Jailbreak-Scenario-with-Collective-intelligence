@@ -1,0 +1,22 @@
+└─Δ python .\EP_analyze_Speech_Act.py
+Some weights of the model checkpoint at joeddav/xlm-roberta-large-xnli were not used when initializing XLMRobertaForSequenceClassification: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
+- This IS expected if you are initializing XLMRobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Device set to use cpu
+Sentence type distribution in EARLY phase:
+  declarative: 48.7%
+  question: 39.7%
+  command: 7.1%
+  exclamation: 4.5%
+
+Sentence type distribution in MID phase:
+  declarative: 43.3%
+  question: 41.0%
+  command: 6.7%
+  exclamation: 9.0%
+
+Sentence type distribution in LATE phase:
+  declarative: 55.0%
+  question: 26.7%
+  command: 9.2%
+  exclamation: 9.2%
