@@ -4,8 +4,8 @@ import math
 
 class ChallengeManager:
     def __init__(self,
-                 challenges_source=Path('game-data') / 'challenges.json',
-                 records_source=Path('game-data') / 'game_records.json'):
+                 challenges_source=Path('../game-data') / 'challenges.json',
+                 records_source=Path('../game-data') / 'game_records.json'):
         self.challenges = self._load_json(challenges_source)
         self.records = self._load_json(records_source)
         self.records_map = {}
