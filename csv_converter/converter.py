@@ -2,10 +2,10 @@ import json
 import csv
 import os
 
-with open('../data/challenges.json', 'r', encoding='utf-8') as f:
+with open('../analyze/game-data/challenges.json', 'r', encoding='utf-8') as f:
     challenges = json.load(f)
 
-with open('../data/challenges.csv', 'w', encoding='utf-8', newline='') as f:
+with open('../analyze/game-data/challenges.csv', 'w', encoding='utf-8', newline='') as f:
     fieldnames = [
         'id', 'creator_username', 'description', 'defender_prompt', 'defender_first_reply',
         'forbidden_words', 'model', 'successful_attacks', 'category'
@@ -15,10 +15,10 @@ with open('../data/challenges.csv', 'w', encoding='utf-8', newline='') as f:
     for c in challenges:
         writer.writerow({k: c.get(k, '') for k in fieldnames})
 
-with open('../data/game_records.json', 'r', encoding='utf-8') as f:
+with open('../analyze/game-data/game_records.json', 'r', encoding='utf-8') as f:
     records = json.load(f)
 
-with open('../data/game_records.csv', 'w', encoding='utf-8', newline='') as f:
+with open('../analyze/game-data/game_records.csv', 'w', encoding='utf-8', newline='') as f:
     fieldnames = [
         'challenge_id', 'winner', 'turns', 'attacker_username', 'defender_username', 'score', 'conversation'
     ]

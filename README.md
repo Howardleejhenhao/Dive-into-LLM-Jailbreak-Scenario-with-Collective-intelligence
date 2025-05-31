@@ -80,7 +80,26 @@ We want to explore and understand what specific words, phrases, or techniques ca
     └── styles.css
 ```
 
-- **analyze/**: Contains Python scripts for data analysis, raw game data, generated plots, and analysis results.
-- **backend/**: Backend server implementation and its dependencies.
-- **csv_converter/**: Utility for converting data to and from CSV format.
-- **frontend/**: Web interface for visualizing and interacting with the analyzed data.
+## Dataset
+The dataset can be found in the `analyze/game-data` folder:
+
+1. `challenges.json` contains information about all challenges.
+2. `game_records.json` stores every message we collected from both users and GPT.
+
+## How to Run the Analysis Code
+
+1. Navigate to the `analyze` directory.
+2. Install all required packages:
+   ```
+   pip install -r requirements.txt
+   ```
+3. Run any analysis script from the `analyze-code` folder. For example:
+   ```
+   python analyze_triggers.py
+   ```
+
+## **[Website](https://ai.driseam.com/)**
+The `backend` and `frontend` folders contain the code that powers the site.
+
+## csv converter
+Run `csv_conerter/converter.py` to merge all data into a single CSV file.
